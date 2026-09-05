@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Event Details | Smart Campus Fest 2026</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body class="details-page">
+	<header class="details-header">
+		<img src="images/logo.png" alt="TMG College of Arts and Science logo" class="details-logo">
+		<p class="tagline">Smart Campus Fest 2026</p>
+	</header>
+
+	<main class="event-details">
+		<a href="index.html#events" class="back-link">← Back to all events</a>
+		<section class="event-panel">
+			<p class="details-label">Event details</p>
+			<h1 id="event-name">Event Name</h1>
+			<div class="event-info">
+				<div><span>DATE</span><strong id="event-date">18 October 2026</strong></div>
+				<div><span>TIME</span><strong id="event-time">10:00 AM - 12:00 PM</strong></div>
+				<div><span>PLACE</span><strong id="event-place">TMG College Campus</strong></div>
+			</div>
+			<button class="btn event-register-btn" type="button" id="open-register">Register for this event</button>
+		</section>
+	</main>
+
+	<div class="modal-backdrop" id="register-modal" hidden>
+		<section class="register-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+			<button class="modal-close" type="button" id="close-register" aria-label="Close registration form">×</button>
+			<p class="details-label">Smart Campus Fest 2026</p>
+			<h2 id="modal-title">Register for <span id="modal-event-name">this event</span></h2>
+			<form id="event-form">
+				<label>Name<input type="text" name="name" required placeholder="Your full name"></label>
+				<label>Email<input type="email" name="email" required placeholder="you@example.com"></label>
+				<label>Phone number<input type="tel" name="phone" required placeholder="Your phone number"></label>
+				<label>College<input type="text" name="college" required placeholder="Your college name"></label>
+				<label>Department<input type="text" name="department" required placeholder="Your department"></label>
+				<label>Registration number<input type="text" name="registration-number" required placeholder="Your registration number"></label>
+				<button class="btn modal-submit" type="submit">Submit registration</button>
+			</form>
+			<p class="form-message" id="form-message" aria-live="polite"></p>
+			<div class="qr-result" id="qr-result" hidden>
+				<p class="qr-title">Your registration QR code</p>
+				<div id="qr-code" aria-label="Registration QR code"></div>
+				<p class="qr-help">Show this QR code at the event entrance.</p>
+				<p class="registration-success" id="registration-success">Registration successful</p>
+			</div>
+		</section>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
